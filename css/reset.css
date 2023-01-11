@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../font/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../font/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Rajdhani-Bold";
+  src: url(../font/Rajdhani/Rajdhani-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NanumSquareR";
+  src: url("../font/NanumFontSetup_OTF_SQUARE/NanumSquareR.otf") format("opentype");
+}
+@font-face {
+  font-family: "NanumSquareB";
+  src: url("../font/NanumFontSetup_OTF_SQUARE/NanumSquareB.otf") format("opentype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "NanumSquareR";
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: "Rajdhani-Bold";
+}
+
+h2 {
+  font-size: 0;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-family: "Montserrat-Bold";
+}
+
+h4 {
+  font-size: 1.5em;
+  font-family: "Montserrat-Regular";
+}
+
+p {
+  font-size: 1em;
+  line-height: 20px;
+}/*# sourceMappingURL=reset.css.map */
