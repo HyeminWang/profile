@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "NotoSerifKR-Regular";
+    src: url(../font/NotoSerifKR-Regular.woff);
+}
+
+@font-face {
+    font-family: "Nanum Square Regular";
+    src: url(../font/NanumSquareR.otf);
+}
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(../font/Montserrat-Regular.ttf);
+}
+
+$font-noto: "NotoSerifKR-Regular";
+$font-nanum: "Nanum Square Regular";
+$font-montserrat: "Montserrat-Regular";
+
+$break-mobile: 320px;
+$break-tablet: 768px;
+$break-pc: 1024px;
+
+$svg-white: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+$svg-grey: invert(77%) sepia(6%) saturate(8%) hue-rotate(355deg) brightness(83%) contrast(88%);

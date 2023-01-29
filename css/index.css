@@ -100,21 +100,14 @@ p {
 body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 .fa-snowflake {
   color: #fff;
   position: absolute;
   top: -20px;
-  -webkit-animation: fall linear forwards;
-          animation: fall linear forwards;
-}
-
-@-webkit-keyframes fall {
-  to {
-    transform: translateY(105vh);
-  }
+  animation: fall linear forwards;
 }
 
 @keyframes fall {
@@ -132,7 +125,7 @@ body {
   width: 100%;
   height: 100vh;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper header .mobile-only {
     display: none;
   }
@@ -144,8 +137,7 @@ body {
   top: 0;
   z-index: 5;
   background-color: 255, 255, 255, 0.1;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   padding: 0 20px;
 }
 .wrapper header .mobile-only .header-fix .mobile-h1 h1 {
@@ -205,11 +197,14 @@ body {
   font-size: 40px;
   font-family: "Rajdhani-Bold";
 }
+.wrapper header .mobile-menu .gnb li a:hover {
+  color: #75ffff;
+}
 .wrapper header .pc-menu {
   width: 100%;
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper header .pc-menu {
     display: block;
     position: fixed;
@@ -232,7 +227,15 @@ body {
 .wrapper header .pc-menu .gnb li a {
   color: #c3c3c3;
   font-size: 25px;
+  opacity: 0.5;
+  transition: all 0.4s;
   font-family: "Rajdhani-Bold";
+}
+.wrapper header .pc-menu .gnb li a:hover {
+  opacity: 0.7;
+}
+.wrapper header .pc-menu .gnb li a:active {
+  opacity: 1;
 }
 .wrapper header .pc-menu .gnb li a span {
   font-size: 30px;
@@ -245,20 +248,6 @@ body {
   text-align: center;
   font-size: 30px;
   color: #fff;
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  51% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 @keyframes blink {
   0% {
@@ -276,14 +265,13 @@ body {
 }
 .wrapper header #type:after {
   content: "|";
-  -webkit-animation: blink 0.5s step-end infinite;
-          animation: blink 0.5s step-end infinite;
+  animation: blink 0.5s step-end infinite;
   font-family: "NanumSquareB";
 }
 .wrapper header .resume-btn button {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper header .resume-btn button {
     display: block;
     background-color: #ccc;
@@ -305,7 +293,7 @@ body {
   left: 50%;
   transform: translate(-50%);
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper header .swipe {
     display: none;
   }
@@ -313,28 +301,7 @@ body {
 .wrapper header .swipe img {
   width: 30px;
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
-  -webkit-animation: swipe-up 1.5s ease-in-out 1s infinite;
-          animation: swipe-up 1.5s ease-in-out 1s infinite;
-}
-@-webkit-keyframes swipe-up {
-  0% {
-    transform: translate(0, 50%) scale(0);
-  }
-  10% {
-    transform: translate(0, 50%) scale(0);
-  }
-  20% {
-    transform: translate(0, 50%) scale(1);
-  }
-  80% {
-    transform: translate(0, -50%) scale(1);
-  }
-  90% {
-    transform: translate(0, -50%) scale(0);
-  }
-  100% {
-    transform: translate(0, -50%) scale(0);
-  }
+  animation: swipe-up 1.5s ease-in-out 1s infinite;
 }
 @keyframes swipe-up {
   0% {
@@ -364,7 +331,7 @@ body {
 .wrapper header .mouse {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper header .mouse {
     display: block;
     position: absolute;
@@ -373,7 +340,7 @@ body {
     transform: translateX(-50%);
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper header .mouse .mouse-outline {
     width: 30px;
     height: 44px;
@@ -381,7 +348,7 @@ body {
     border: 2px solid #75ffff;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper header .mouse .mouse-wheel {
     width: 4px;
     height: 8px;
@@ -390,16 +357,7 @@ body {
     position: absolute;
     top: 8px;
     left: calc(50% - 2px);
-    -webkit-animation: mouse-moving 1s infinite;
-            animation: mouse-moving 1s infinite;
-  }
-}
-@-webkit-keyframes mouse-moving {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
+    animation: mouse-moving 1s infinite;
   }
 }
 @keyframes mouse-moving {
@@ -415,6 +373,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
+  opacity: 0;
 }
 .wrapper main section.about-me .section-subj {
   position: relative;
@@ -432,7 +391,7 @@ body {
 .wrapper main section.about-me .folder-box {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .folder-box {
     display: flex;
     justify-content: space-around;
@@ -445,7 +404,7 @@ body {
     margin-right: 100px;
   }
 }
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
+@media screen and (min-width: 1440px) and (min-width: 1440px) {
   .wrapper main section.about-me .folder-box .folder-img img {
     cursor: pointer;
     position: absolute;
@@ -454,25 +413,56 @@ body {
     transform: translateY(-50%);
   }
 }
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
+  .wrapper main section.about-me .folder-box .folder-img .click {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    width: 60px;
+    position: absolute;
+    top: 48%;
+    left: 33%;
+    animation: hand-clicking 1.5s infinite;
+  }
+}
+@media screen and (min-width: 1440px) {
+  @keyframes hand-clicking {
+    0%, 100% {
+      transform: translate(0, 0) scale(1) rotate(-1deg);
+      opacity: 65%;
+    }
+    30% {
+      transform: translate(-1px, 3px) scale(0.95) rotate(-5deg);
+      opacity: 80%;
+    }
+  }
+}
+@media screen and (min-width: 1440px) and (min-width: 1440px) {
   .wrapper main section.about-me .folder-box .folder-des {
     background-color: #000;
     color: #fff;
     width: 235px;
     height: 235px;
-    line-height: 25px;
-    padding: 70px;
     border-radius: 50%;
     position: absolute;
     top: 50%;
     right: 25%;
     transform: translateY(-50%);
+    display: table;
+  }
+}
+@media screen and (min-width: 1440px) and (min-width: 1440px) {
+  .wrapper main section.about-me .folder-box .folder-des p {
+    font-size: 1.3em;
+    line-height: 35px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 20px;
   }
 }
 .wrapper main section.about-me .modal {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .modal {
     margin: 0 auto;
     z-index: 100;
@@ -488,7 +478,7 @@ body {
 .wrapper main section.about-me .modal .modal-content strong {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .modal .modal-content strong {
     display: block;
     text-align: center;
@@ -497,7 +487,7 @@ body {
     width: 100%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .modal .modal-content .intro-flex {
     display: flex;
     justify-content: space-between;
@@ -510,7 +500,7 @@ body {
   margin-top: 50px;
   text-align: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .modal .modal-content .intro-flex .img-text-box {
     margin-top: 0;
     width: 20%;
@@ -520,7 +510,7 @@ body {
   width: 200px;
   height: 200px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .modal .modal-content .intro-flex .img-text-box .img-box {
     margin-bottom: 20px;
   }
@@ -528,13 +518,13 @@ body {
 .wrapper main section.about-me .modal .modal-content .intro-flex .img-text-box .text-box p {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .modal .modal-content .intro-flex .img-text-box .text-box p {
     display: block;
     line-height: 25px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .modal .modal-content .intro-flex .img-text-box .text-box p span {
     font-size: 20px;
     color: #63666a;
@@ -543,7 +533,7 @@ body {
 .wrapper main section.about-me .modal .modal-content .intro-flex .me_des {
   margin-top: 20px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .modal .modal-content .intro-flex .me_des {
     margin-top: 0;
     width: 70%;
@@ -562,7 +552,7 @@ body {
 .wrapper main section.about-me .modal-back {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .modal-back {
     cursor: pointer;
     z-index: 5;
@@ -577,7 +567,7 @@ body {
 .wrapper main section.about-me .modal_close {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper main section.about-me .modal_close {
     z-index: 101;
     position: fixed;
@@ -602,6 +592,7 @@ body {
   margin: 100px 0;
   width: 100%;
   height: 100vh;
+  opacity: 0;
 }
 .wrapper section.skills .section-subj {
   position: relative;
@@ -616,6 +607,11 @@ body {
   width: 180px;
   height: 70px;
 }
+@media screen and (min-width: 1440px) {
+  .wrapper section.skills {
+    height: 110vh;
+  }
+}
 .wrapper section.skills .flex-box {
   display: flex;
   flex-wrap: wrap;
@@ -629,11 +625,20 @@ body {
   width: 105px;
   height: 105px;
   margin-bottom: 10px;
+  animation: pivot 0.25s infinite;
+}
+@keyframes pivot {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
 }
 .wrapper section.skills .flex-box .skill_item .animated-progress {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .animated-progress {
     display: block;
     width: 100px;
@@ -644,48 +649,48 @@ body {
     overflow: hidden;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .animated-progress span {
     width: 0;
     height: 100%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .orange span {
     background-color: #e34d25;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .darkblue span {
     background-color: #1471b6;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .pink span {
     background-color: #cf639a;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .yellow span {
     background-color: #f7df1e;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .blue span {
     background-color: #52c1de;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .yellow span {
     background-color: #f7df1e;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .navy span {
     background-color: #061f34;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .brown span {
     background-color: #2c100f;
   }
@@ -702,7 +707,7 @@ body {
   position: absolute;
   left: 0;
   width: 160px;
-  height: 210px;
+  height: 220px;
   opacity: 0.3;
 }
 @media screen and (min-width: 768px) {
@@ -710,22 +715,23 @@ body {
     left: 18%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .skills_des img {
     left: 33%;
   }
 }
 .wrapper section.skills .flex-box .skill_item .skills_des p {
   width: 160px;
-  text-align: center;
-  padding: 60px 5px 0 5px;
+  text-align: justify;
+  word-break: break-all;
+  padding: 60px 8px 0 8px;
 }
 @media screen and (min-width: 768px) {
   .wrapper section.skills .flex-box .skill_item .skills_des p {
     margin-left: 18%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.skills .flex-box .skill_item .skills_des p {
     margin-left: 33%;
   }
@@ -733,7 +739,7 @@ body {
 .wrapper section.skills .flex-box .skill_item:hover .skills_des {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .wrapper section.skills .flex-box .skill_item:hover .skills_des {
     display: block;
   }
@@ -758,6 +764,7 @@ body {
   padding-top: 100px;
 }
 .wrapper section.projects .project_item .p-item {
+  opacity: 0;
   width: 100%;
   height: 100vh;
 }
@@ -902,13 +909,13 @@ body {
   color: #fff;
   text-align: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.contact h3 {
     margin: 100px 0;
     font-size: 2em;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.contact .contact-flex {
     display: flex;
     align-items: center;
@@ -917,18 +924,18 @@ body {
 .wrapper section.contact .contact-flex .my_character {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.contact .contact-flex .my_character {
     width: 40%;
     display: block;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.contact .contact-flex .my_character img {
     width: 200px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.contact .contact-flex .my_info {
     width: 60%;
   }
@@ -953,7 +960,7 @@ body {
   width: 100%;
   margin-top: 50px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   .wrapper section.contact .contact-flex .my_info form {
     margin-top: 70px;
   }
@@ -986,6 +993,7 @@ body {
   float: right;
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 2px 2px 2px #fff;
 }
 .wrapper section.contact .contact-flex .my_info form button:before, .wrapper section.contact .contact-flex .my_info form button:after {
   position: absolute;
@@ -1011,25 +1019,8 @@ body {
   font-family: "NanumSquareB";
 }
 .wrapper section.contact .contact-flex .my_info form button:hover:before {
-  -webkit-animation: criss-cross-left 0.8s both;
-          animation: criss-cross-left 0.8s both;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-}
-@-webkit-keyframes criss-cross-left {
-  0% {
-    left: 5px;
-  }
-  50% {
-    left: 50%;
-    width: 20px;
-    height: 20px;
-  }
-  100% {
-    left: 50%;
-    width: 150%;
-    height: 150%;
-  }
+  animation: criss-cross-left 0.8s both;
+  animation-direction: alternate;
 }
 @keyframes criss-cross-left {
   0% {
@@ -1047,25 +1038,8 @@ body {
   }
 }
 .wrapper section.contact .contact-flex .my_info form button:hover:after {
-  -webkit-animation: criss-cross-right 0.8s both;
-          animation: criss-cross-right 0.8s both;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-}
-@-webkit-keyframes criss-cross-right {
-  0% {
-    right: 5px;
-  }
-  50% {
-    right: 50%;
-    width: 20px;
-    height: 20px;
-  }
-  100% {
-    right: 50%;
-    width: 150%;
-    height: 150%;
-  }
+  animation: criss-cross-right 0.8s both;
+  animation-direction: alternate;
 }
 @keyframes criss-cross-right {
   0% {
@@ -1107,30 +1081,44 @@ footer .container .personal_btn a img {
   width: 35px;
   height: 35px;
 }
-footer .container .kakao-modal {
+footer .container .modal-stack {
   display: none;
-  position: relative;
-  width: 100%;
-  text-align: center;
 }
-footer .container .kakao-modal img {
-  width: 100%;
-}
-@media screen and (min-width: 1024px) {
-  footer .container .kakao-modal img {
-    width: 50%;
+@media screen and (min-width: 1440px) {
+  footer .container .modal-stack {
+    cursor: pointer;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
   }
 }
-footer .container .kakao-modal .kakao-close {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  width: 10%;
+footer .container .kakao-modal {
+  display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
+  footer .container .kakao-modal {
+    z-index: 999;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-20%, -50%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  footer .container .kakao-modal img {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1440px) {
   footer .container .kakao-modal .kakao-close {
-    top: 5%;
-    right: 28%;
+    cursor: pointer;
+    position: fixed;
+    top: 1%;
+    right: 61%;
     width: 5%;
   }
 }
@@ -1143,37 +1131,30 @@ footer .footer-bg img {
   width: 100%;
   z-index: 1;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
   footer .footer-bg img {
     height: 250px;
   }
 }
-footer .fixed-menu img {
+footer .fixed-menu {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+footer .fixed-menu img {
+  position: fixed;
+  right: 3%;
+  bottom: 10%;
+  width: 80px;
+  animation: wiggle 3s ease-in-out infinite;
+  cursor: pointer;
+}
+@media screen and (min-width: 1440px) {
   footer .fixed-menu img {
-    position: fixed;
-    bottom: 10%;
     right: 5%;
-    cursor: pointer;
-    display: block;
     width: 110px;
-    -webkit-animation: wiggle 3s ease-in-out infinite;
-            animation: wiggle 3s ease-in-out infinite;
   }
 }
 footer .fixed-menu img:hover {
-  -webkit-animation: none;
-          animation: none;
-}
-@-webkit-keyframes wiggle {
-  33% {
-    transform: rotate(10deg);
-  }
-  66% {
-    transform: rotate(-10deg);
-  }
+  animation: none;
 }
 @keyframes wiggle {
   33% {

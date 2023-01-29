@@ -1,0 +1,480 @@
+@import "./reset.scss";
+@import "./mixin.scss";
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .contents_sub_box {
+        width: 400%;
+        height: 100%;
+
+        #main_page1 {
+            width: 25%;
+            height: 100%;
+            display: flex;
+
+            .bingbong_box {
+                width: 30%;
+                .bingbong_text {
+                    position: absolute;
+                    bottom: 260px;
+                    left: 140px;
+                    width: 200px;
+                    height: 100px;
+                    border: 5px dotted #000;
+                    border-radius: 20px;
+                    font-size: 15px;
+                    animation: move 4s linear infinite;
+                    text-align: center;
+                    padding: 15px 0;
+                    font-family: 'InsideOut';
+                }
+
+                .bingbong {
+                    width: 250px;
+                    height: 250px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 5%;
+                    animation: move 4s linear infinite;
+                }
+                
+                @keyframes move {
+                    0% {
+                        transform: translateY(0);
+                    }
+    
+                    50% {
+                        transform: translateY(-50px);
+                    }
+    
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            .img-box {
+                width: 70%;
+                .main_img {
+                    width: 60%;
+                    height: 100%;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+                .logo {
+                    position: absolute;
+                    width: 10%;
+                    top: 2%;
+                    right: 2%;
+                }
+            }
+        }
+        .go_home_btn {
+            cursor: pointer;
+            .go_home_text {
+                position: absolute;
+                top: 7%;
+                left: 5.5%;
+                z-index: 300;
+                font-size: 30px;
+                font-family: 'InsideOut';
+                animation: moving-left 2s infinite;
+                color: #fff;
+            }
+
+            .go_home_img {
+                width: 7%;
+                position: absolute;
+                left: 2%;
+                top: 3%;
+                z-index: 300;
+                animation: moving-left 2s infinite;
+            }
+        }
+
+        @keyframes moving-left{
+            0%, 100% {
+                transform: translate(0,0) scale(1) rotate(-1deg);
+                opacity: 65%;
+            }
+            30% {
+                transform: translate(-5px, 5px) scale(.95) rotate(-10deg);
+                opacity: 80%;
+            }
+        }
+
+        @keyframes moving-right {
+            0%, 100% {
+                transform: translate(0,0) scale(1) rotate(1deg);
+                opacity: 65%;
+            }
+            30% {
+                transform: translate(5px, 5px) scale(.95) rotate(10deg);
+                opacity: 80%;
+            }
+        }
+
+        #main_page2 {
+            @include section-width();
+
+            .bg {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    }
+            }
+            .img_center {
+                width: 100%;
+                .all_together {
+                    width: 50%;
+                    position: absolute;
+                    left: 25%; 
+                    bottom: 0;
+                }
+            }
+
+            .crt_profile {
+                .crt_joy {
+                    width: 35%;
+                    height: 15%;
+                    position: absolute;
+                    left: 550px;
+                    top: 50px;
+                    border: 5px solid #fff;
+                    border-radius: 20px;
+                    background-color: rgba(255, 255, 255, 0.6);
+    
+                    @include crt-font();
+                    &::after {
+                        border-top: 20px solid #fff;
+                        border-left: 20px solid transparent;
+                        border-right: 20px solid transparent;
+                        border-bottom: 0px solid transparent;
+                        content: "";
+                        position: absolute;
+                        top: 135px;
+                        left: 300px;
+                    }
+                } // joy
+                .fear-box {
+                    .crt_img1 {
+                        width: 17%;
+                        position: absolute;
+                        top: 150px;
+                        left: 540px;
+                        z-index: 200;
+                    }
+                    .crt_fear {
+                        left: 30px;
+                        top: 350px;
+                        @include crt-des-box();
+                        @include crt-font();
+                    } // fear
+                }
+    
+                .disgust-box {
+                    .crt_img2 {
+                        width: 18%;
+                        position: absolute;
+                        top: 290px;
+                        right: 595px;
+                        z-index: 200;
+                    }
+                    .crt_disgust {
+                        right: 30px;
+                        top: 300px;
+                        @include crt-des-box();
+                        @include crt-font();
+                    } // disgust
+                }
+                .anger-box {
+                    .crt_img3 {
+                        width: 10%;
+                        position: absolute;
+                        bottom: 150px;
+                        left: 790px;
+                        z-index: 200;
+                    }
+                    .crt_anger {
+                        left: 70px;
+                        bottom: 200px;
+                        @include crt-des-box();
+                        @include crt-font();
+                    } // anger
+                }
+                .sadness-box {
+                    .crt_img4 {
+                        width: 14%;
+                        position: absolute;
+                        bottom: 160px;
+                        right: 700px;
+                        z-index: 200;
+                    }
+                    .crt_sadness {
+                        right: 70px;
+                        bottom: 200px;
+                        @include crt-des-box();
+                        @include crt-font();
+                    } // sadness
+                }
+                .crt_img1:hover{
+                    top: 140px;
+                    left: 535px;
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+
+                .crt_img2:hover,
+                .crt_img3:hover,
+                .crt_img4:hover{
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+        } // main_page2
+
+        .next_btn {
+            cursor: pointer;
+            .next {
+                position: absolute;
+                top: 9%;
+                right: 3%;
+                z-index: 300;
+                font-size: 30px;
+                font-family: 'InsideOut';
+                color: #fff;
+                animation: moving-right 2s infinite;
+            }
+
+            .next_img {
+                width: 5%;
+                height: auto;
+                position: absolute;
+                right: 6%;
+                top: 3%;
+                z-index: 300;
+                animation: moving-right 2s infinite;
+            }
+        }
+
+        #main_page3{
+            @include section-width();
+
+            .bg2 {
+                width: 100%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    }
+                }
+
+                .text_box {
+                    display: block;
+                    width: 45ch;
+                    position: absolute;
+                    top: 70px;
+                    left: 800px;
+                    border: 3px solid #fff;
+                    padding: 20px;
+
+                    p {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        border-right: 2px solid #212121;
+                        animation: typing 7s steps(5, end),
+                        cursor 1s step-start infinite;
+                    }
+                }
+
+                @keyframes typing {
+                    0% {
+                        width: 0;
+                    }
+                    50% {
+                        width: 22ch; 
+                    }
+                    100% {
+                        width: 45ch; 
+                    }
+                }
+
+                @keyframes cursor {
+                    0%, 100% { 
+                        border-color: #212121; 
+                    }
+                }
+
+                .crt_arrange {
+                    .crt_arr1 {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50px;
+                        width: 18%;
+                        cursor: pointer;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                    .crt_arr2 {
+                        position: absolute;
+                        bottom: 20px;
+                        left: 400px;
+                        width: 20%;
+                        cursor: pointer;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                    .crt_arr3 {
+                        position: absolute;
+                        bottom: 30px;
+                        left: 800px;
+                        width: 17%;
+                        cursor: pointer;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                    .crt_arr4 {
+                        position: absolute;
+                        bottom: 30px;
+                        right: 400px;
+                        width: 18%;
+                        cursor: pointer;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                    .crt_arr5 {
+                        position: absolute;
+                        bottom: 0;
+                        right: 50px;
+                        width: 16%;
+                        cursor: pointer;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                    
+                    .modal1 {
+                        @include modal-common();
+                        top: 300px;
+                        left: 120px;
+                    }
+                    .modal2 {
+                        @include modal-common();
+                        top: 200px;
+                        left: 500px;
+                    }
+                    .modal3 {
+                        @include modal-common();
+                        top: -10px;
+                        left: 900px;
+                    }
+                    .modal4 {
+                        @include modal-common();
+                        top: 200px;
+                        right: 470px;
+                    }
+                    .modal5 {
+                        @include modal-common();
+                        top: 130px;
+                        right: 120px;
+                    }
+                }
+            }
+
+            .previous_btn {
+                cursor: pointer;
+                .previous {
+                    position: absolute;
+                    top: 9%;
+                    left: 2%;
+                    z-index: 300;
+                    font-size: 30px;
+                    font-family: 'InsideOut';
+                    color: #fff;
+                    animation: moving-left 2s infinite;
+                }
+    
+                .previous_btn {
+                    width: 4.5%;
+                    height: auto;
+                    position: absolute;
+                    left: 7%;
+                    top: 3%;
+                    z-index: 300;
+                    animation: moving-left 2s infinite;
+                }
+            }
+
+        #main_page4{
+            @include section-width();
+
+            .bg3 {
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 100%;
+                    }
+            }
+            .go_home_btn2 {
+                cursor: pointer;
+                .go_home_text {
+                    position: absolute;
+                    top: 7%;
+                    right: 3%;
+                    z-index: 300;
+                    font-size: 30px;
+                    font-family: 'InsideOut';
+                    animation: moving-right 2s infinite;
+                    color: #fff;
+                }
+
+                .go_home_img {
+                    width: 7%;
+                    height: auto;
+                    position: absolute;
+                    right: 2%;
+                    top: 3%;
+                    z-index: 300;
+                    animation: moving-right 2s infinite;
+                }
+            }
+            .video {
+                width: 100%;
+                display: flex;
+                .img-container {
+                    p {
+                        color: #fff;
+                        z-index: 2;
+                        position: absolute;
+                        top: 43%;
+                        left: 33.5%;
+                        font-size: 20px;
+                    }
+                    img {
+                        width: 10%;
+                        position: absolute;
+                        top: 43%;
+                        left: 25%;
+                    }
+                }
+                iframe {
+                    position: absolute;
+                    top: 40%;
+                    right: 25%;
+                }
+            }
+        }
+    }
+}

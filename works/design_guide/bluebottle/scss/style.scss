@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "SANGJU Gyeongcheon Island";
+    src: url(../font/SANGJU\ Gyeongcheon\ Island.woff);
+}
+
+@font-face {
+    font-family: "GowunDodum-Regular";
+    src: url(../font/GowunDodum-Regular.ttf);
+}
+
+$font-noto: "NotoSerifKR-Regular";
+$font-gowun: "GowunDodum-Regular";
+
+$break-mobile: 320px;
+$break-tablet: 768px;
+$break-pc: 1024px;
+
+$svg-white: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+$svg-blue: invert(55%) sepia(40%) saturate(6104%) hue-rotate(160deg) brightness(111%) contrast(101%);

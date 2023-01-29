@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="images" property="og:image" content="./images/logo/meta_img.png" />
+    <link rel="shortcut icon" type="image" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./css/bluebottle.css">
+    <title>Bluebottle design guide</title>
+    <script>
+        window.onload = function() {
+            var backTotop = () => {
+                // scroll 하면 button show & hide
+                window.addEventListener('scroll', () => {
+                    if(document.querySelector('html').scrollTop > 100) {
+                        document.getElementById('go-top').style.display = "block";
+                    }else {
+                        document.getElementById('go-top').style.display = "none";
+                    }
+                });
+                // back to top
+                document.getElementById('go-top').addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth"
+                    });
+                })
+            };
+            backTotop();
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="back">
+                <a href="../../../index.html"><img src="./images/snows-shoeing.svg" alt="back버튼"></a>
+            </div>
+            <div class="container">
+                <div class="subject-mockUp">
+                    <h1>Blue Bottle</h1>
+                    <h4>리뉴얼 웹사이트</h4>
+                    <div class="flex-box">
+                        <div class="pc-box">
+                            <img src="./images/pc-bluebottle.png" alt="블루보틀 pc버전" class="pc">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="design_process">
+                <h2>DESIGN PROCESS</h2>
+                <div class="container">
+                    <h3>01. DESIGN PROCESS</h3>
+                    <div class="grid-box">
+                        <h4>Grid System</h4>
+                        <div class="flex-box">
+                            <div class="first">
+                                <img src="./images/grid.png" alt="그리드시스템 pc에 적용">
+                            </div>
+                            <div class="second">
+                                <img src="./images/grid-system.png" alt="그리드시스템">
+                            </div>
+                            <div class="third">
+                                <p>Full width : 1920px<br>
+                                Grid width : 1180px<br>
+                                Column width: 80px<br>
+                                Gutter width: 20px<br>
+                                Number of columns: 12</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="concept">
+                        <h4>Concept</h4>
+                        <div class="concept-flex">
+                            <div class="concept-text">
+                                <p>블루보틀은 미국 샌프란시스코에서 시작한 커피 브랜드로, 한국에 입점하기 전부터 선풍적인 인기를 끌었습니다. 홈페이지 업데이트는 되고 있으나 메인 페이지의 임팩트가 부족해 새롭게 구성해 보았습니다. 가장 기본적인 웹페이지의 형식을 유지하면서도 사용자가 서비스를 접하기 편하게 각 요소의 구성과 배치에 직관성을 부여하고자 했습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="color-system">
+                        <h4>Color System</h4>
+                        <div class="color-flex">
+                            <img src="./images/colour_1.png" alt="메인컬러 블루">
+                            <img src="./images/colour_2.png" alt="서브컬러 네이비">
+                        </div>
+                        <p>블루보틀의 메인 컬러인 블루를 주로 사용하여 블루보틀을 좋아하는 사용자에게 큰 설명 없이 색만으로도 정보를 쉽게 전달할 수 있게 했으며, 파스텔컬러를 사용하여 밝으면서 따뜻한 느낌의 카페 분위기를 내려고 했습니다.</p>
+                    </div>
+                    <div class="typograpy">
+                        <h4>Typograpy</h4>
+                        <div class="typo-flex">
+                            <div class="main">
+                                <p><span class="grey">Main</span><span class="font-big">Gowun Dodum<br>Regular<br></span>: 깔끔하고 친근한 느낌을 주는 Gowun Dodum을 사용합니다.</p>
+                            </div>
+                            <div class="sub">
+                                <p><span class="grey">Sub</span><span class="font-big">Noto Serif KR<br>Regular<br></span>: 차분하고 가독성이 좋은 Noto serif KR을 사용합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-page">
+                <h2>MAIN PAGE</h2>
+                <div class="container">
+                    <h3>02. MAIN PAGE</h3>
+                    <div class="flex-box">
+                        <ul>
+                            <li>Header</li>
+                            <li>Contents</li>
+                            <li>Footer</li>
+                        </ul>
+                        <div class="img-box">
+                            <div class="pc-ver">
+                                <img src="./images/pc-bluebottle.png" alt="pc버전">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrange-des">
+                        <p>- 페이지 접속 시 가장 처음 보게 되는 영역에
+                            이벤트와 프로모션을 넣어 방문객에게 정보를 효과적으로 전달할 수 있게 하였습니다.<br><br>
+                            - 상품 소개 부분에는 따로 클릭할 필요 없이 호버할때에도 간략하게 상품정보가 나올 수 있도록 사용자 편의성에 중점을 두었습니다.</p>
+                    </div>
+                    <div class="main-page-entire">
+                        <div class="main-pc">
+                            <img src="./images/main-page.png" alt="pc에서의 메인페이지 모습">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="fixed-menu">
+                    <button type="button" id="go-top"><img src="./images/arrow-up.svg" alt="top버튼"></button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

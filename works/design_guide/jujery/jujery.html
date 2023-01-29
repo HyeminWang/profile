@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="images" property="og:image" content="./images/logo/meta_img.png" />
+    <link rel="shortcut icon" type="image" href="./images/jujery_page_shortcut_icon.png" />
+    <link rel="stylesheet" href="./css/jujery.css">
+    <title>Jujery design guide</title>
+    <script>
+        window.onload = function() {
+            var backTotop = () => {
+                // scroll 하면 button show & hide
+                window.addEventListener('scroll', () => {
+                    if(document.querySelector('html').scrollTop > 100) {
+                        document.getElementById('go-top').style.display = "block";
+                    }else {
+                        document.getElementById('go-top').style.display = "none";
+                    }
+                });
+                // back to top
+                document.getElementById('go-top').addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth"
+                    });
+                })
+            };
+            backTotop();
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="back">
+                    <a href="#"><img src="./images/snows-shoeing.svg" alt="home버튼"></a>
+                </div>
+                <div class="subject-mockUp">
+                    <h1>JUJERY</h1>
+                    <h4>반응형 웹페이지</h4>
+                    <div class="flex-box">
+                        <div class="pc-box">
+                            <img src="./images/pc.png" alt="주저리 pc버전" class="pc">
+                        </div>
+                        <div class="mobile-box">
+                            <img src="./images/mobile.png" alt="주저리 pc버전" class="mobile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="design_process">
+                <h2>DESIGN PROCESS</h2>
+                <div class="container">
+                    <h3>01. DESIGN PROCESS</h3>
+                    <div class="grid-box">
+                        <h4>Grid System</h4>
+                        <div class="flex-box">
+                            <div class="first">
+                                <img src="./images/grid.png" alt="그리드시스템 pc에 적용">
+                            </div>
+                            <div class="second">
+                                <img src="./images/grid-system.png" alt="그리드시스템">
+                            </div>
+                            <div class="third">
+                                <p>Full width : 1920px<br>
+                                Grid width : 1180px<br>
+                                Column width: 80px<br>
+                                Gutter width: 20px<br>
+                                Number of columns: 12</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="concept">
+                        <h4>Concept</h4>
+                        <div class="concept-flex">
+                            <div class="concept-text">
+                                <p>코로나바이러스 감염증(코로나19) 장기화에 홀로 즐기는 '혼술'이나 집에서 마시는 '홈술' 문화, MZ세대의 과시형 소비 '플랙스' 문화가 뜨는 가운데 프리미엄 전통주가 '힙한 술'로 각인되면서 전통주의 수요가 급등하였습니다. 전통주에 대한 궁금증 해소와 흥미를 높이기 위해  우리나라 전통주의 역사, 현재를 공유하는 페이지를 디자인 하였습니다.</p>
+                            </div>
+                            <div class="concept-des">
+                                <span>Simple</span>
+                                <span>Highly accessible</span>
+                                <span>Informative design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="color-system">
+                        <h4>Color System</h4>
+                        <div class="color-flex">
+                            <img src="./images/korean_paper1.png" alt="메인 한지 배경">
+                            <img src="./images/korean_paper2.png" alt="상세페이지 한지 배경">
+                            <img src="./images/korean_paper3.png" alt="메뉴한지 배경">
+                            <img src="./images/korean_paper4.png" alt="메인페이지 한지 배경">
+                        </div>
+                        <p>우리나라 종이 한지는 천년의 세월을 간직한 우리 고유의 종이입니다.
+                            오랜 역사를 간직한 전통주를 한지 질감과 함께 표현해 보았습니다.
+                            전체적으로 전통주 느낌을 잘 살리기 위하여 배경으로 아이보리색상의 한지를, 
+                            서브컬러로는 검은 한지를 사용해 군더더기 없는 단정하고 깔끔한 느낌을 주었습니다.</p>
+                    </div>
+                    <div class="typograpy">
+                        <h4>Typograpy</h4>
+                        <div class="typo-flex">
+                            <div class="main">
+                                <p><span class="grey">Main</span><span class="font-big">상주경천섬체<br>Regular<br></span>: 붓글씨의 형태를 따른 구조의 상주경천섬체를 사용합니다.</p>
+                            </div>
+                            <div class="sub">
+                                <p><span class="grey">Sub</span><span class="font-big">Noto Serif KR<br>Regular<br></span>: 깔끔하고 가독성이 좋은 Noto serif KR을 사용합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <h4>Logo</h4>
+                        <div class="logo-flex">
+                            <p>주저리의 심볼마크를 표현하였습니다.</p>
+                            <div class="line"></div>
+                        </div>
+                        <div class="img-container">
+                            <img src="./images/logo.png" alt="주저리 로고">
+                        </div>
+                        <p>주저리의 로고는 술 항아리와 표주박을 사용해 브랜드의 핵심가치를 직관적으로 전달합니다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main-page">
+                <h2>MAIN PAGE</h2>
+                <div class="container">
+                    <h3>02. MAIN PAGE</h3>
+                    <div class="flex-box">
+                        <ul>
+                            <li>Header</li>
+                            <li>Contents</li>
+                            <li>Footer</li>
+                        </ul>
+                        <div class="img-box">
+                            <div class="pc-ver">
+                                <img src="./images/pc.png" alt="pc버전">
+                            </div>
+                            <div class="mobile-ver">
+                                <img src="./images/mobile.png" alt="mobile버전">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrange-des">
+                        <p>- 페이지 접속 시 가장 처음 보게 되는 영역에
+                            전통주와 관련된 영상을 삽입하여  시선을 집중시켰습니다. 
+                            또한 스크롤시 각 영역이 화면 전체를 차지하게 하여 영역들의 
+                            화면 사용 범위를 넓혀 큼직하고 시원한 느낌을 줬습니다.<br><br>
+                            - 이미지 자료와 애니메이션 효과 등을 적극활용해서 
+                            페이지에 대해 탐색하고 싶은 생각을 들게 하고자 했으며 
+                            바로 상세페이지로 접속할 수 있도록 메뉴 아이콘 클릭 없이 
+                            상세페이지로 이동이 가능한 영역을 메인의 한 영역으로 배치했습니다.</p>
+                    </div>
+                    <div class="main-page-entire">
+                        <div class="main-pc">
+                            <h4>PC</h4>
+                            <img src="./images/pc-main.png" alt="pc에서의 메인페이지 모습">
+                        </div>
+                        <div class="main-mobile">
+                            <h4>MOBILE</h4>
+                            <img src="./images/mobile-main.png" alt="mobile에서의 메인페이지 모습">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="sub-page">
+                <h2>SUB PAGE</h2>
+                <div class="container">
+                    <h3>03. SUB PAGE</h3>
+                    <div class="sub-des">
+                        <p>- 사용자가 불편하지 않을 수 있도록 종류별 메인 페이지 요소를 클릭하면 그 구성 페이지로 넘어가도록 하여 페이지 이동의 연속성이 끊기지 않도록 하였습니다.또한 너무 정적이지 않게 스크롤 할 때 애니메이션 효과를 나타나게 하였습니다.
+                    </div>
+                    <div class="pc-sub">
+                        <img src="./images/subpage-type.png" alt="pc에서의 종류별 홈페이지">
+                        <img src="./images/subpage-detail.png" alt="pc에서 상세페이지 중 탁주">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="fixed-menu">
+                    <button type="button" id="go-top"><img src="./images/arrow-up.svg" alt="top버튼"></button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@mixin crt-font() {
+    font-size: 18px;
+    padding: 30px 20px;
+    line-height: 25px;
+}
+
+@mixin crt-des-box() {
+    display: none;
+    width: 30%;
+    height: 15%;
+    position: absolute;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+@mixin section-width() {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+}
+
+@mixin modal-common() {
+    display: none;
+    width: 10%;
+    position: absolute;
+}
+
+@font-face {
+    font-family: 'InsideOut';
+    src: url(../font/Inside\ Out4.otf);
+    font-weight: normal;
+    font-style: normal;
+}

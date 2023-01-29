@@ -1,5 +1,3 @@
-
-
 // 눈내리는 효과
 setInterval(createSnowFlake, 50);
 
@@ -8,6 +6,7 @@ function createSnowFlake() {
     snow_flake.classList.add('fas');
     snow_flake.classList.add('fa-snowflake');
     snow_flake.style.left = Math.random() * document.body.clientWidth + 'px';
+    console.log(document.body.clientWidth);
     snow_flake.style.animationDuration = Math.random() * 3 + 2 + 's';
     snow_flake.style.opacity = Math.random();
     snow_flake.style.fontSize = Math.random() * 10 + 10 + 'px';
@@ -21,38 +20,40 @@ function createSnowFlake() {
 
   // 상단바 햄버거버튼 색
 $(function() {
-  const headerMenu = $("header").offset().top;
-  console.log(headerMenu);
+  const aboutMe = $(".about-me").offset().top - 200;
+  const skillPart = $(".skills").offset().top - 150;
+  const projectPart = $(".projects").offset().top - 150;
+  const contactPart = $(".contact").offset().top - 150;
 
   $(window).on("scroll", function(e) {
     console.log($(document).scrollTop());
 
-    if($(document).scrollTop() > 740 && $(document).scrollTop() < 7750) {
+    if($(document).scrollTop() > aboutMe && $(document).scrollTop() < contactPart) {
       $(".before-menu span").css("background-color", "#000");
     } else {
       $(".before-menu span").css("background-color", "#fff");
     };
 
     //menu-borderBottom
-    if($(document).scrollTop() > 900 && $(document).scrollTop() < 2000) {
+    if($(document).scrollTop() > aboutMe && $(document).scrollTop() < skillPart) {
       $(".pc-menu li:nth-child(2)").css("border-bottom", "3px solid #039be5");
     } else{
       $(".pc-menu li:nth-child(2)").css("border-bottom", "3px solid #ccc");
     }
 
-    if($(document).scrollTop() > 2000 && $(document).scrollTop() < 3200) {
+    if($(document).scrollTop() > skillPart && $(document).scrollTop() < projectPart) {
       $(".pc-menu li:nth-child(3)").css("border-bottom", "3px solid #039be5");
     } else{
       $(".pc-menu li:nth-child(3)").css("border-bottom", "3px solid #ccc");
     }
 
-    if($(document).scrollTop() > 3200 && $(document).scrollTop() < 8700) {
+    if($(document).scrollTop() > projectPart && $(document).scrollTop() < contactPart) {
       $(".pc-menu li:nth-child(4)").css("border-bottom", "3px solid #039be5");
     } else{
       $(".pc-menu li:nth-child(4)").css("border-bottom", "3px solid #ccc");
     }
 
-    if($(document).scrollTop() > 8700) {
+    if($(document).scrollTop() > contactPart) {
       $(".pc-menu li:nth-child(5)").css("border-bottom", "3px solid #039be5");
     } else{
       $(".pc-menu li:nth-child(5)").css("border-bottom", "3px solid #ccc");
@@ -60,7 +61,6 @@ $(function() {
   });
 
   // 모달창
-  
   $(window).on("load resize", function() {
     var WinW = $(window).width();
     console.log(WinW);
@@ -97,12 +97,15 @@ $(function() {
   });
 
   // top btn
-  $(document).scroll(function() {
-    if($(this).scrollTop() > 400) {
-      $('.fixed-menu').fadeIn();
-    } else {
-      $('.fixed-menu').fadeOut();
-    }
+    $(window).scroll(function() {
+      if($(this).scrollTop() > aboutMe) {
+        $('.fixed-menu').fadeIn();
+      } else {
+        $('.fixed-menu').fadeOut();
+      }
+    });
+    $('.fixed-menu').click(function(e) {
+      $('html').animate({ scrollTop: 0 }, 500);
   });
 
   $('.fixed-menu').click(function() {
@@ -111,9 +114,42 @@ $(function() {
 
   // sns
   $(".kakaotalk").click(function() {
-    $(this).parent().next(".kakao-modal").css("display", "block");
-  })
+    $('html').css('overflow', 'hidden');
+    $(this).parent().parent().next().next(".kakao-modal").css("display", "block");
+    $(".modal-stack").css("display", "block");
+  });
+  $(".kakao-close").click(function() {
+    $(this).parent(".kakao-modal").css("display", "none");
+    $(".modal-stack").fadeOut();
+    $('html').css('overflow', 'unset');
+  });
+  $(".modal-stack").on("click", function() {
+    $(this).css("display", "none");
+    $(".kakao-modal").fadeOut();
+    $('html').css('overflow', 'unset');
+  });
 
+  // 스크롤 자연스럽게 이동
+  $(".pc-menu li:nth-child(2)").click(function(e) {
+    e.preventDefault();
+    $("html, body").stop().animate({scrollTop:aboutMe}, 800);
+  });
+
+  $(".pc-menu li:nth-child(3)").click(function(e) {
+    e.preventDefault();
+    $("html, body").stop().animate({scrollTop:skillPart}, 800);
+  });
+
+  $(".pc-menu li:nth-child(4)").click(function(e) {
+    e.preventDefault();
+    $("html, body").stop().animate({scrollTop:projectPart}, 800);
+  });
+
+  $(".pc-menu li:last-child").click(function(e) {
+    e.preventDefault();
+    $("html, body").stop().animate({scrollTop:contactPart}, 1500);
+  });
+  
   
   // mobile menu 나타나고 사라지게하기
   $(".before-menu").on("click", function() {
@@ -133,13 +169,17 @@ $(function() {
     $(".before-menu").fadeIn();
   });
 
-  $(".animated-progress > span").each(function () {
-    $(this).animate(
-      {
-        width: $(this).attr("data-progress") + "%",
-      },
-      4000
-    );
+  $(window).on("scroll", function(e) {
+    if($(document).scrollTop() > skillPart) {
+      $(".animated-progress > span").each(function () {
+        $(this).animate(
+          {
+            width: $(this).attr("data-progress") + "%",
+          },
+          1000
+        );
+      });
+    }
   });
 
   $(window).on("load resize", function() {
@@ -159,6 +199,21 @@ $(function() {
       });
     }
   })
+
+});
+
+$(window).scroll(function () {
+  var menu = [$('.about-me'), $('.skills'), $('.p-item')];
+  $(menu).each(function (i, obj) {
+    var bottom_of_element = obj.offset().top + obj.outerHeight();
+    console.log(bottom_of_element);
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+    console.log(bottom_of_window);
+
+    if (bottom_of_window+600 > bottom_of_element) {
+      obj.animate({ opacity: "1" }, 1000);
+    }
+  });
 });
 
 // header 타이핑 효과

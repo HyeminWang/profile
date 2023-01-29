@@ -6,9 +6,8 @@
 body { 
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
-
 
 //snow-effect
 .fa-snowflake {
@@ -103,6 +102,9 @@ body {
                             size: 40px;
                             family: $font-special;
                         }
+                        &:hover {
+                            color: #75ffff;
+                        }
                     }
                 }
             }
@@ -129,7 +131,15 @@ body {
                     a {
                         color: #c3c3c3;
                         font-size: 25px;
+                        opacity: 0.5;
+                        transition: all 0.4s;
                         font-family: $font-special;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                        &:active {
+                            opacity: 1;
+                        }
                         span {
                             font-size: 30px;
                         }
@@ -256,6 +266,7 @@ body {
             position: relative;
             @include object_measure();
             @include section_subject();
+            opacity: 0;
                 .folder-box {
                     display: none;
                     @include responsive(pc-screens) {
@@ -274,6 +285,23 @@ body {
                                     transform: translateY(-50%);
                                 }
                             }
+                            .click {
+                                filter: $svg-white;
+                                width: 60px;
+                                position: absolute;
+                                top: 48%; left: 33%;
+                                animation: hand-clicking 1.5s infinite;
+                            }
+                            @keyframes hand-clicking {
+                                0%, 100% {
+                                    transform: translate(0,0) scale(1) rotate(-1deg);
+                                    opacity: 65%;
+                                }
+                                30% {
+                                    transform: translate(-1px, 3px) scale(.95) rotate(-5deg);
+                                    opacity: 80%;
+                                }
+                            }
                         }
                         .folder-des {
                             @include responsive(pc-screens) {
@@ -281,12 +309,21 @@ body {
                                 color: #fff;
                                 width: 235px;
                                 height: 235px;
-                                line-height: 25px;
-                                padding: 70px;
                                 border-radius: 50%;
                                 position: absolute;
                                 top: 50%; right: 25%;
                                 transform: translateY(-50%);
+                                display: table;
+                            }
+                            p {
+                                @include responsive(pc-screens) {
+                                    font-size: 1.3em;
+                                    line-height: 35px;
+                                    display: table-cell;
+                                    vertical-align: middle;
+                                    text-align: center;
+                                    padding: 0 20px;
+                                }
                             }
                         }
                     }
@@ -414,8 +451,13 @@ body {
 
         section.skills {
             margin: 100px 0; //
-            @include object_measure();
+            width: 100%;
+            height: 100vh;
             @include section_subject();
+            opacity: 0;
+            @include responsive(pc-screens) {
+            height: 110vh;
+            }
             .flex-box {
                 display: flex;
                 flex-wrap: wrap;
@@ -427,6 +469,15 @@ body {
                         width: 105px;
                         height: 105px;
                         margin-bottom: 10px;
+                        animation: pivot 0.25s infinite;
+                    }
+                    @keyframes pivot {
+                        0%, 100% {
+                            transform: rotate(-2deg);
+                        }
+                        50% {
+                            transform: rotate(2deg);
+                        }
                     }
                     .animated-progress {
                         display: none;
@@ -497,7 +548,7 @@ body {
                             position: absolute;
                             left: 0;
                             width: 160px;
-                            height: 210px;
+                            height: 220px;
                             opacity: 0.3;
                             @include responsive(tablet-screens) {
                                 left: 18%;
@@ -508,8 +559,9 @@ body {
                         }
                         p {
                             width: 160px;
-                            text-align: center;
-                            padding: 60px 5px 0 5px;
+                            text-align: justify;
+                            word-break: break-all;
+                            padding: 60px 8px 0 8px;
                             @include responsive(tablet-screens) {
                                 margin-left: 18%;
                             }
@@ -520,7 +572,7 @@ body {
                     }
                     &:hover .skills_des {
                         display: none;
-                        @include responsive(pc-screens) {
+                        @include responsive(tablet-screens) {
                             display: block;
                         }
                     }
@@ -534,6 +586,7 @@ body {
             .project_item {
                 padding-top: 100px;
                 .p-item {
+                    opacity: 0;
                     @include object_measure();
                     @include responsive(tablet-screens) {
                         display: flex;
@@ -687,6 +740,7 @@ body {
                             float: right;
                             cursor: pointer;
                             overflow: hidden;
+                            box-shadow: 2px 2px 2px #fff;
                             &:before, &:after {
                                 position: absolute;
                                 top: 50%;
@@ -778,25 +832,38 @@ body {
                     }
                 }
             }
+            .modal-stack {
+                display: none;
+                @include responsive(pc-screens) {
+                    cursor: pointer;
+                    z-index: 10;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    background: rgba(0,0,0,0.8);
+                    @include object_measure();
+                }
+            }
             .kakao-modal {
                 display: none;
-                position: relative;
-                width: 100%;
-                text-align: center;
+                @include responsive(pc-screens) {
+                    z-index: 999;
+                    position: fixed;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-20%, -50%);
+                }
                 img {
-                    width: 100%;
                     @include responsive(pc-screens) {
-                        width: 50%;
+                        width: 40%;
                     }
                 }
                 .kakao-close {
-                    position: absolute;
-                    top: 5%;
-                    right: 5%;
-                    width: 10%;
                     @include responsive(pc-screens) {
-                        top: 5%;
-                        right: 28%;
+                        cursor: pointer;
+                        position: fixed;
+                        top: 1%;
+                        right: 61%;
                         width: 5%;
                     }
                 }
@@ -815,16 +882,17 @@ body {
             }
         }
         .fixed-menu {
+            display: none;
             img {
-                display: none;
+                position: fixed;
+                right: 3%;
+                bottom: 10%;
+                width: 80px;
+                animation: wiggle 3s ease-in-out infinite;
+                cursor: pointer;
                 @include responsive(pc-screens) {
-                    position: fixed;
-                    bottom: 10%;
                     right: 5%;
-                    cursor: pointer;
-                    display: block;
                     width: 110px;
-                    animation: wiggle 3s ease-in-out infinite;
                 }
                 &:hover {
                     animation: none;

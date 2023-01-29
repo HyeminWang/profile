@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+strong {
+    display: block;
+    font-size: 70px;
+    font-family: 'Gowun Dodum', sans-serif;
+    line-height: 60px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 0;
+}
+
+h3 {
+    font-size: 30px;
+    color: #03254c;
+    text-align: center;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+header,
+nav,
+main,
+article,
+section,
+footer {
+    display: block;
+}

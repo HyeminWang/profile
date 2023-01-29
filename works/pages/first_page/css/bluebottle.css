@@ -1,0 +1,568 @@
+@charset "utf-8";
+
+.container {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+
+/* ========== header ========== */
+header {
+    width: 100%;
+    height: 200px;
+}
+
+.backgroundbox {
+    width: 100%;
+    height: 41px;
+    background-color: #00c0f0;
+}
+
+.util_menu {
+    width: 100%;
+    line-height: 41px;
+    height: 40px;
+}
+
+.util_menu > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.util_menu li > a {
+    padding-right: 18px;
+    color: white;
+    font-size: 14px;
+}
+
+.util_menu li:last-child > a {
+    padding-right: 0;
+}
+
+.util_menu li > a:hover {
+    text-decoration: underline;
+}
+
+
+/* logo */
+.menu_logo_flexbox {
+    position: relative;
+    width: 100%; height: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 47px;
+    margin-top: 23.415px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.main-menu .gnb {
+    padding-top: 67px;
+    width: 720px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-menu .gnb a {
+    font-size: 18px;
+}
+
+.search_box {
+    margin-top: 50px;
+    height: 60px;
+    background: #00c0f0;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.search_box:hover > .search_txt {
+    width: 220px;
+    padding: 0 10px;
+}
+
+.search_box:hover > .search_btn {
+    background: #1e1e1e;
+}
+
+.search_btn {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.search_btn img{
+    width: 20px;
+}
+
+.search_txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.5s;
+    line-height: 40px;
+    width: 0;
+}
+
+.main-menu .gnb a:hover {
+    font-weight: 600;
+}
+
+
+
+/* ========== main ========== */
+/* article */
+.slide {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 602px;
+}
+
+.slide ul {
+    display: flex;
+    width: 100%;
+}
+
+.slide li {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.slide li a {
+    position: relative;
+}
+
+.main1_box {
+    width: 100%;
+    position: relative;
+}
+
+.main_textbox {
+    position: absolute;
+    top: 136px; left: 246px;
+}
+
+.slide strong,
+.slide p {
+    color: #03254c;
+}
+
+.slide strong {
+    margin-bottom: 75px;
+}
+
+.beer_emphasize {
+    color: #3715e4;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+    margin: 30px;
+}
+
+.swiper-button-next:hover, 
+.swiper-button-prev:hover {
+    opacity: 0.8;
+}
+
+
+
+/* truck */
+.truck {
+    margin: 126px 0;
+}
+
+.truck h3 {
+    margin-bottom: 75px;
+}
+
+.truck_flexbox {
+    display: flex;
+    width: 100%; height: 400px;
+}
+
+.video {
+    width: 67.9661017%;
+    height: 100%;
+}
+
+.truck_textbox {
+    margin: 72px 0 0 62px;
+}
+
+.truck_textbox strong {
+    font-size: 28px;
+}
+
+.truck_textbox p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.truck_textbox button {
+    border: 1px solid #dbdbdb;
+    border-radius: 30px;
+    padding: 14px 33px;
+    background: none;
+    font-size: 16px;
+}
+
+.truck_textbox button:hover {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+    background-color: #02aae0;
+    opacity: 0.7;
+    transition: all 0.5s ease;
+    cursor:pointer;
+}
+
+
+/* merchandise */
+.merchandise_list {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.merchandise_list .span_box1 {
+    position: absolute;
+    top:71px; left: 129px;
+}
+
+.merchandise_list .span_box2 {
+    position: absolute;
+    top:71px; left: 330px;
+}
+
+.merchandise_list .span_box3 {
+    position: absolute;
+    top:71px; left: 520px;
+}
+
+.merchandise_list .span_box4 {
+    position: absolute;
+    top:71px; left: 732px;
+}
+
+.merchandise_list .span_box5 {
+    position: absolute;
+    top:71px; left: 942px;
+}
+
+.merchandise h4 {
+    text-align: center;
+}
+
+.merchandise span {
+    display: none;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 16px;
+    color: #03254c;
+}
+
+.merchandise_list div {
+    width: 180px; height: 200px;
+}
+
+.merchandise_list img {
+    width: 100%;
+}
+
+.merchandise_list a:hover img {
+    opacity: 0.4;
+}
+
+.merchandise_list a:hover span {
+    display: block;
+}
+
+
+/* merchandise & coffee_bean 공통부분 */
+.shop_text {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.shop_text a {
+    color: #03254c;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.shop_text a:hover {
+    font-weight: 600;
+}
+
+
+/* coffee_bean */
+.coffee_bean {
+    margin-top: 126px;
+}
+
+.bean_variety {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    grid-gap: 0 12px;
+}
+
+.bean_variety .bean_area:hover {
+    opacity: 0.2;
+}
+
+.bean_variety .img_box {
+    width: 584px;
+    height: 249px;
+}
+
+.img_box img {
+    width: 50%;
+    height: 100%;
+}
+
+.bean_variety div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bean_variety span {
+    display: none;
+}
+
+.bean_variety a:hover span {
+    display: block;
+    font-weight: bold;
+}
+
+.bean_variety p {
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 17px 0;
+    
+    text-align: center;
+}
+
+.bean_spanbox1 {
+    position: absolute;
+    top: 100px; left: 322px;
+}
+
+.bean_spanbox2 {
+    position: absolute;
+    top: 100px; left: 917px;
+}
+
+.bean_spanbox3 {
+    position: absolute;
+    top: 415px; left: 322px;
+}
+
+.bean_spanbox4 {
+    position: absolute;
+    top: 415px; left: 917px;
+}
+
+
+/* introduce_store */
+.introduce_store {
+    margin-top: 126px;
+    margin-bottom: 75px;
+}
+
+.flex_container {
+    display: flex;
+}
+
+.samcheong_textbox {
+    margin-left: 40px;
+}
+
+.samcheong_textbox h3 {
+    font-family: 'Gowun Dodum', sans-serif;
+    text-align: left;
+    margin: 78px 0;
+}
+
+.samcheong_textbox p {
+    font-size: 20px;
+}
+
+.icon_box {
+    display: flex;
+    justify-content: space-between;
+    padding: 79px 24px;
+}
+
+.icon_box p {
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+
+.icon_box a:hover {
+    font-weight: 600;
+}
+
+
+
+/* ========== footer ========== */
+footer {
+    width: 100%;
+    height: 351px;
+}
+
+.footer_menu li a,
+.security ul a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer_wrap {
+    background-color: #00c0f0;
+    padding: 38px 0;
+}
+
+.footer_menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 102px;
+}
+
+
+/* menu_box */
+.footer_menu ul {
+    margin-top: 28px;
+}
+
+.footer_menu li a {
+    line-height: 20px;
+}
+
+.menu_box h4 a {
+    color: #fff;
+}
+
+.menu_box h4 a:hover,
+.footer_menu li a:hover {
+    text-decoration: underline;
+}
+
+
+/* security */
+.security ul {
+    display: flex;
+}
+
+.security > ul > li {
+    margin-top: 51px;
+    border-right: 1px solid #ccc;
+}
+
+.security > ul > li:last-child {
+    border-right: 0;
+}
+
+.security li a {
+    margin: 0 18px;
+}
+
+.security li a:hover {
+    text-decoration: underline;
+}
+
+.security li:first-child a {
+    margin-left: 0;
+}
+
+
+/* info_detail */
+.info_detail {
+    position: relative;
+    display: flex;
+    margin-top: 26px;
+}
+
+.info_detail p,
+.info_detail span {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.info_detail span {
+    border-left: 1px solid #ccc;
+    padding-left: 25px;
+    margin-left: 25px;
+}
+
+.info_detail .copyright{
+    position: absolute;
+    right: 0;
+}
+
+.fixed_menu {
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+
+    display: inline-block;
+    width: 80px;
+    z-index: 50000;
+}
+
+.fixed_menu img {
+    width: 100%;
+}
+
+.fixed_menu .coffee_ad,
+.fixed_menu .close_btn {
+    display: none;
+}
+
+.fixed_menu:hover .coffee_ad {
+    display: block;
+}
+
+.fixed_menu .close_btn {
+    position: fixed;
+    width: 15px;
+    right: 35px;
+    bottom: 140px;
+    cursor: pointer;
+}
+
+.fixed_menu:hover .close_btn {
+    display: block;
+}
+
+.close_btn img {
+    width: 100%;
+}

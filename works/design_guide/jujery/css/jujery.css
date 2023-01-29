@@ -1,0 +1,600 @@
+@font-face {
+  font-family: "SANGJU Gyeongcheon Island";
+  src: url(../font/SANGJU\ Gyeongcheon\ Island.woff);
+}
+@font-face {
+  font-family: "NotoSerifKR-Regular";
+  src: url(../font/NotoSerifKR-Regular.woff);
+}
+@font-face {
+  font-family: "SANGJU Gyeongcheon Island";
+  src: url(../font/SANGJU\ Gyeongcheon\ Island.woff);
+}
+@font-face {
+  font-family: "NotoSerifKR-Regular";
+  src: url(../font/NotoSerifKR-Regular.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "NotoSerifKR-Regular";
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 0;
+}
+
+h3 {
+  font-size: 1.7em;
+  margin-bottom: 30px;
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1em;
+  line-height: 23px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.wrapper header {
+  width: 100%;
+  background-image: url(../images/main_menu_background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 300px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper header {
+    background-size: 100% 600px;
+  }
+}
+.wrapper header .back {
+  width: 35px;
+  position: absolute;
+  right: 0;
+  margin: 30px;
+  z-index: 999;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper header .back {
+    right: 2%;
+    width: 45px;
+  }
+}
+.wrapper header .back a img {
+  width: 100%;
+  cursor: pointer;
+}
+.wrapper header .back a img:hover {
+  transform: translateX(-0.5em);
+}
+.wrapper header .subject-mockUp {
+  text-align: center;
+  width: 100%;
+}
+.wrapper header .subject-mockUp h1 {
+  display: inline-block;
+  border-bottom: 3px solid #000;
+  margin-top: 100px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper header .subject-mockUp h1 {
+    font-size: 3em;
+  }
+}
+.wrapper header .subject-mockUp h4 {
+  margin-top: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper header .subject-mockUp h4 {
+    font-size: 2em;
+  }
+}
+.wrapper header .subject-mockUp .flex-box {
+  display: flex;
+  width: 100%;
+  margin-top: 250px;
+  margin-bottom: 80px;
+  justify-content: center;
+  position: relative;
+}
+.wrapper header .subject-mockUp .flex-box .pc-box {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper header .subject-mockUp .flex-box .pc-box {
+    top: -200px;
+  }
+}
+.wrapper header .subject-mockUp .flex-box .pc-box img {
+  width: 100%;
+}
+.wrapper header .subject-mockUp .flex-box .mobile-box {
+  width: 15%;
+  position: absolute;
+  right: 17%;
+  bottom: 0;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper header .subject-mockUp .flex-box .mobile-box {
+    top: 0;
+  }
+}
+.wrapper header .subject-mockUp .flex-box .mobile-box img {
+  width: 100%;
+}
+.wrapper main section.design_process {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process {
+    margin-top: 600px;
+  }
+}
+.wrapper main section.design_process .grid-box {
+  border: 1px solid #000;
+  padding: 5%;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .grid-box {
+    padding-top: 3%;
+  }
+}
+.wrapper main section.design_process .grid-box h4 {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .grid-box h4 {
+    font-size: 35px;
+  }
+}
+.wrapper main section.design_process .grid-box .flex-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .grid-box .flex-box {
+    height: 100%;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+.wrapper main section.design_process .grid-box .flex-box img {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .grid-box .flex-box img {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .grid-box .flex-box .first {
+    width: 609px;
+    margin-right: 50px;
+  }
+}
+.wrapper main section.design_process .grid-box .flex-box .first img {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .grid-box .flex-box .second {
+    width: 570px;
+    margin-right: 50px;
+  }
+}
+.wrapper main section.design_process .grid-box .flex-box .second img {
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .grid-box .flex-box .third {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .grid-box .flex-box .third p {
+    font-size: 25px;
+    line-height: 40px;
+  }
+}
+.wrapper main section.design_process .concept {
+  margin-top: 50px;
+  background-color: #eeeeee;
+  padding: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .concept {
+    margin-top: 100px;
+    width: 60%;
+  }
+}
+.wrapper main section.design_process .concept h4 {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .concept h4 {
+    font-size: 35px;
+  }
+}
+.wrapper main section.design_process .concept .concept-flex {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .concept .concept-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .concept .concept-flex .concept-text {
+    width: 70%;
+  }
+}
+.wrapper main section.design_process .concept .concept-flex .concept-text p {
+  line-height: 27px;
+  text-align: justify;
+}
+.wrapper main section.design_process .concept .concept-flex .concept-des {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .concept .concept-flex .concept-des {
+    display: block;
+  }
+}
+.wrapper main section.design_process .concept .concept-flex .concept-des span {
+  width: 170px;
+  border-radius: 20px;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  background-color: #dbdbdb;
+  margin-top: 20px;
+}
+.wrapper main section.design_process .concept .concept-flex .concept-des span:first-child {
+  margin-top: 0;
+}
+.wrapper main section.design_process .color-system {
+  margin-top: 50px;
+  background-color: #cccccc;
+  padding: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .color-system {
+    width: 60%;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+}
+.wrapper main section.design_process .color-system h4 {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .color-system h4 {
+    font-size: 35px;
+  }
+}
+.wrapper main section.design_process .color-system .color-flex {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+.wrapper main section.design_process .color-system .color-flex:last-child {
+  gap: 0;
+}
+.wrapper main section.design_process .color-system .color-flex img {
+  width: 20%;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.wrapper main section.design_process .color-system p {
+  line-height: 27px;
+  text-align: justify;
+}
+.wrapper main section.design_process .typograpy {
+  margin-top: 50px;
+  background-color: #a0a0a0;
+  padding: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .typograpy {
+    width: 60%;
+    margin-top: -20px;
+  }
+}
+.wrapper main section.design_process .typograpy h4 {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .typograpy h4 {
+    font-size: 35px;
+  }
+}
+.wrapper main section.design_process .typograpy .typo-flex {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper main section.design_process .typograpy .typo-flex .grey {
+  color: #707070;
+  display: block;
+}
+.wrapper main section.design_process .typograpy .typo-flex .font-big {
+  font-size: 2em;
+  line-height: 30px;
+}
+.wrapper main section.design_process .typograpy .typo-flex .main {
+  font-family: "SANGJU Gyeongcheon Island";
+  margin-bottom: 20px;
+}
+.wrapper main section.design_process .typograpy .typo-flex p {
+  line-height: 27px;
+}
+.wrapper main section.design_process .logo {
+  margin-top: 50px;
+  background-color: #f8f9fa;
+  padding: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .logo {
+    width: 60%;
+    margin: 50px auto;
+  }
+}
+.wrapper main section.design_process .logo h4 {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .logo h4 {
+    font-size: 35px;
+  }
+}
+.wrapper main section.design_process .logo .logo-flex {
+  display: flex;
+}
+.wrapper main section.design_process .logo .logo-flex p {
+  margin-right: 7px;
+}
+.wrapper main section.design_process .logo .logo-flex .line {
+  vertical-align: middle;
+  margin: 11px 0 0;
+  width: 27%;
+  height: 3px;
+  background-color: #b1b1b1;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.design_process .logo .logo-flex .line {
+    width: 64%;
+  }
+}
+.wrapper main section.design_process .logo .img-container {
+  width: 40%;
+  margin: 30px auto;
+}
+.wrapper main section.design_process .logo .img-container img {
+  width: 100%;
+}
+.wrapper main section.design_process .logo p {
+  text-align: center;
+}
+.wrapper main section.main-page {
+  width: 100%;
+  margin-top: 80px;
+}
+.wrapper main section.main-page .flex-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.main-page .flex-box {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.wrapper main section.main-page .flex-box ul {
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.main-page .flex-box ul {
+    width: 40%;
+  }
+}
+.wrapper main section.main-page .flex-box ul li {
+  margin: 0 20%;
+  background-color: #eeeeee;
+  margin-bottom: 20px;
+}
+.wrapper main section.main-page .flex-box ul li:first-child, .wrapper main section.main-page .flex-box ul li:last-child {
+  height: 40px;
+  line-height: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.main-page .flex-box ul li:first-child, .wrapper main section.main-page .flex-box ul li:last-child {
+    height: 60px;
+    line-height: 60px;
+  }
+}
+.wrapper main section.main-page .flex-box ul li:nth-child(2) {
+  height: 100px;
+  line-height: 100px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.main-page .flex-box ul li:nth-child(2) {
+    height: 250px;
+    line-height: 250px;
+  }
+}
+.wrapper main section.main-page .flex-box .img-box {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.main-page .flex-box .img-box {
+    width: 60%;
+  }
+}
+.wrapper main section.main-page .flex-box .img-box .pc-ver {
+  width: 60%;
+}
+.wrapper main section.main-page .flex-box .img-box .pc-ver img {
+  width: 100%;
+}
+.wrapper main section.main-page .flex-box .img-box .mobile-ver {
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+.wrapper main section.main-page .flex-box .img-box .mobile-ver img {
+  width: 100%;
+}
+.wrapper main section.main-page .arrange-des {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.main-page .arrange-des {
+    margin: 50px 0;
+  }
+}
+.wrapper main section.main-page .arrange-des p {
+  text-align: justify;
+  line-height: 27px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.main-page .arrange-des p {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+.wrapper main section.main-page .main-page-entire {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.main-page .main-page-entire {
+    flex-direction: row;
+  }
+}
+.wrapper main section.main-page .main-page-entire h4 {
+  font-family: "SANGJU Gyeongcheon Island";
+}
+.wrapper main section.main-page .main-page-entire img {
+  width: 100%;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.wrapper main section.main-page .main-page-entire .main-pc {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.main-page .main-page-entire .main-pc {
+    margin-right: 10%;
+  }
+}
+.wrapper main section.sub-page {
+  width: 100%;
+  margin-top: 80px;
+}
+.wrapper main section.sub-page .sub-des {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.sub-page .sub-des {
+    margin: 50px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.sub-page .sub-des p {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+.wrapper main section.sub-page .pc-sub {
+  width: 80%;
+  margin: 0 auto;
+}
+.wrapper main section.sub-page .pc-sub img {
+  width: 100%;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper main section.sub-page .pc-sub img {
+    margin-bottom: 100px;
+  }
+}
+.wrapper footer .container .fixed-menu {
+  width: 7%;
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+  z-index: 999;
+}
+@media screen and (min-width: 1024px) {
+  .wrapper footer .container .fixed-menu {
+    width: 2.5%;
+  }
+}
+.wrapper footer .container .fixed-menu button img {
+  width: 100%;
+  filter: invert(77%) sepia(6%) saturate(8%) hue-rotate(355deg) brightness(83%) contrast(88%);
+  cursor: pointer;
+}
+.wrapper footer .container .fixed-menu button img:hover {
+  filter: none;
+}/*# sourceMappingURL=jujery.css.map */

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <title>CU 자판기</title>
+    <script src="./js/jquery.js" defer></script>
+    <script src="./js/index.js" defer></script>
+</head>
+<body>
+    <section class="container">
+        <h2>CU VENDING MACHINE</h2>
+        <div class="logo">
+            <img src="./images/cu_logo.png" alt="cu_logo">
+            <p>CUP NOODLES</p>
+        </div>
+
+        <div class="wrapper">
+            <div class="ramen_box">
+                <div class="item_box">
+                    <ul>
+                        <li>
+                            <img src="./images/shin.png" alt="shin" class="small">
+                            <strong>신라면소컵</strong>
+                            <span>1,150</span>
+                        </li>
+                        <li>
+                            <img src="./images/fire_chicken.png" alt="fire_chicken" class="small">
+                            <strong>불닭볶음면소컵</strong>
+                            <span>1,150</span>
+                        </li>
+                        <li>
+                            <img src="./images/jjajang.png" alt="jjajangg" class="small">
+                            <strong>짜파게티범벅</strong>
+                            <span>900</span>
+                        </li>
+                        <li>
+                            <img src="./images/jin.png" alt="jin">
+                            <strong>진라면매운컵</strong>
+                            <span>1,300</span>
+                        </li>
+                        <li>
+                            <img src="./images/jjamppong.png" alt="jjamppong">
+                            <strong>오징어짬뽕큰사발컵</strong>
+                            <span>1,800</span>
+                        </li>
+                        <li>
+                            <img src="./images/nuguri.png" alt="nuguri">
+                            <strong>너구리큰사발컵</strong>
+                            <span>1,800</span>
+                        </li>
+                        <li>
+                            <img src="./images/udong.png" alt="shin">
+                            <strong>튀김우동큰사발컵</strong>
+                            <span>1,400</span>
+                        </li>
+                        <li>
+                            <img src="./images/bibim.png" alt="shin">
+                            <strong>팔도비빔면컵</strong>
+                            <span>1,300</span>
+                        </li>
+                        <li>
+                            <img src="./images/carbo.png" alt="shin">
+                            <strong>까르보불닭큰컵</strong>
+                            <span>1,800</span>
+                        </li>
+                    </ul>
+                </div> <!-- item_box -->
+            </div> <!-- ramen_box -->
+    
+            <div class="price_list_box">
+                <div class="price_list">
+                    <p>주문 목록</p>
+                    <div class="list_product">
+
+                    </div>
+                </div>
+                <div class="total_price_box">
+                    <div class="bill_total">
+                        <div>
+                            <span>전체 수량</span>
+                            <span class="total_count">0</span>
+                        </div>
+                        <div>
+                            <span>전체 가격</span>
+                            <span class="total_price">0</span>
+                        </div>
+                    </div>
+                </div> <!-- total_price_box -->
+            </div> <!-- price_list_box -->
+    
+            <div class="money_box">
+                <div class="money_list_box">
+                    <span class="money_list">50,000</span>
+                    <span class="money_list">10,000</span>
+                    <span class="money_list">5,000</span>
+                    <span class="money_list">1,000</span>
+                    <span class="money_list">500</span>
+                    <span class="money_list">100</span>
+                </div>
+                <div class="payment_box">
+                    <div class="payment_span">
+                        <span>지불 금액</span>
+                        <span class="total_money">0</span>
+                    </div>
+                    <input class="totalAmount" type="hidden" value="0">
+                    <input class="totalPay" type="hidden" value="0">
+                    <button type="button" class="pay_btn">지불하기</button>
+                    <button type="button" class="clear_btn">다시하기</button>
+                </div>
+            </div>
+
+            <div class="popup_bg"></div>
+            <div class="change_popup_box">
+                <div class="receipt_title">
+                    <h3>영수증</h3>
+                    <p>정부 방침으로 교환/환불 시 영수증 지참하셔야 합니다.<br>
+                    (30일 내 구매 점포 방문)</p>
+                    <div class="span_box">
+                        <span>잔액</span>
+                        <span class="receipt_total"></span>
+                        <span>원</span>
+                    </div>
+                </div>
+                <div class="btn_box">
+                    <button type="button" class="reset_btn">다시하기</button>
+                    <button type="button" class="close_btn">닫기</button>
+                </div>
+            </div> <!-- change_popup_box-->
+            <div class="popup_text">
+                <span>물건을 선택해주세요.</span>
+                <div class="btn_box">
+                    <button type="button" class="reset_btn">다시하기</button>
+                    <button type="button" class="close_btn">닫기</button>
+                </div>
+            </div>
+        </div>
+
+    </section> <!-- container -->
+</body>
+</html>

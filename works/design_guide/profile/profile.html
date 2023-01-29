@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="images" property="og:image" content="./images/logo/meta_img.png" />
+    <link rel="shortcut icon" type="image" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./css/profile.css">
+    <title>profile portfolio design guide</title>
+    <script>
+        window.onload = function() {
+            var backTotop = () => {
+                // scroll 하면 button show & hide
+                window.addEventListener('scroll', () => {
+                    if(document.querySelector('html').scrollTop > 100) {
+                        document.getElementById('go-top').style.display = "block";
+                    }else {
+                        document.getElementById('go-top').style.display = "none";
+                    }
+                });
+                // back to top
+                document.getElementById('go-top').addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth"
+                    });
+                })
+            };
+            backTotop();
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="back">
+                <a href="../../../index.html"><img src="./images/snows-shoeing.svg" alt="back버튼"></a>
+            </div>
+            <div class="container">
+                <div class="subject-mockUp">
+                    <h1>My portfolio</h1>
+                    <h4>개인 포트폴리오 웹사이트</h4>
+                    <div class="flex-box">
+                        <div class="pc-box">
+                            <img src="./images/pc.png" alt="프로필 pc버전" class="pc">
+                        </div>
+                        <div class="mobile-box">
+                            <img src="./images/mobile.png" alt="프로필 mo버전" class="mobile">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="design_process">
+                <h2>DESIGN PROCESS</h2>
+                <div class="container">
+                    <h3>01. DESIGN PROCESS</h3>
+                    <div class="grid-box">
+                        <h4>Grid System</h4>
+                        <div class="flex-box">
+                            <div class="first">
+                                <img src="./images/grid.png" alt="그리드시스템 pc에 적용">
+                            </div>
+                            <div class="second">
+                                <img src="./images/grid-system.png" alt="그리드시스템">
+                            </div>
+                            <div class="third">
+                                <p>Full width : 1920px<br>
+                                Grid width : 1180px<br>
+                                Column width: 80px<br>
+                                Gutter width: 20px<br>
+                                Number of columns: 12</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="concept">
+                        <h4>Concept</h4>
+                        <div class="concept-flex">
+                            <div class="concept-text">
+                                <p>저를 표현하는 포트폴리오인 만큼 제가 좋아하는 것을 담고자 하여 겨울을 테마로 삼았습니다. 여러명의 사람들과 협업한 프로젝트와 개인 프로젝트로 웹사이트를 제작하여 프로필 포트폴리오에 담아보았습니다. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="color-system">
+                        <h4>Color System</h4>
+                        <div class="color-flex">
+                            <img src="./images/colour-1.png" alt="메인배경색1">
+                            <img src="./images/colour-2.png" alt="메인배경색2">
+                        </div>
+                        <p>차분하고 깔끔한 느낌을 주기 위해 무채색 계통의 색을 사용하였고, 포인트 컬러로 하늘색 계통을 선정하여 자칫 단조로워 보일 수 있는 웹페이지에 생동감을 주었습니다.</p>
+                    </div>
+                    <div class="typograpy">
+                        <h4>Typograpy</h4>
+                        <div class="typo-flex">
+                            <div class="main">
+                                <p><span class="grey">Main</span><span class="font-big">Nanum Square<br>Regular<br></span>: 문장을 주목도 있게 전달하기 좋은 Nanum Square를 사용합니다.</p>
+                            </div>
+                            <div class="sub">
+                                <p><span class="grey">Sub</span><span class="font-big">Montserrat<br>Regular<br></span>: 세련되고 둥글둥글한 느낌의  Montserrat를 사용합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="main-page">
+                <h2>MAIN PAGE</h2>
+                <div class="container">
+                    <h3>02. MAIN PAGE</h3>
+                    <div class="flex-box">
+                        <ul>
+                            <li>Header</li>
+                            <li>Contents</li>
+                            <li>Footer</li>
+                        </ul>
+                        <div class="img-box">
+                            <div class="pc-ver">
+                                <img src="./images/pc.png" alt="pc버전">
+                            </div>
+                            <div class="mobile-ver">
+                                <img src="./images/mobile.png" alt="mobile버전">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrange-des">
+                        <p>- 겨울이 콘셉트인 프로필 포트폴리오의 첫 페이지를 접할 때 눈이 내리는 효과를 주었으며, footer 부분에는 header 부분에서 내린 눈이 쌓인 것을 표현하였습니다.<br><br>
+                            - Top 버튼을 두어 최상단으로 쉽게 이동할 수 있도록 하였습니다.<br><br>
+                            - 네비게이션바를 상단에 고정하여 어느 위치에서든 다른 섹션으로 이동할 수 있도록 하였습니다.</p>
+                    </div>
+                    <div class="main-page-entire">
+                        <div class="main-pc">
+                            <h4>PC</h4>
+                            <img src="./images/pc-ver.png" alt="pc에서의 메인페이지 모습">
+                        </div>
+                        <div class="main-mobile">
+                            <h4>MOBILE</h4>
+                            <img src="./images/mobile-ver.png" alt="mobile에서의 메인페이지 모습">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="fixed-menu">
+                    <button type="button" id="go-top"><img src="./images/arrow-up.svg" alt="top버튼"></button>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
