@@ -253,6 +253,26 @@ window.addEventListener('load', function(){
   playAnim()
 });
 
-function sendEmail() {
+// Email
+const inputText = document.getElementsByClassName("input-text");
+let sendBtn = document.getElementById("send-btn");
 
+for (let i = 0; i < inputText.length; i++) {
+    inputText[i].addEventListener("keyup", checkForm);
 }
+
+function sendEmail() {
+    let canSubmit = true;
+
+    for (let i = 0; i < inputText.length; i++) {
+        if (inputText[i].value.length == 0) {
+            canSubmit = false;
+        }
+    }
+
+    if (canSubmit) {
+        sendBtn.disabled = false;
+    } else if(!canSubmit) {
+        sendBtn.disabled = true;
+    }
+};

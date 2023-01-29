@@ -76,8 +76,7 @@ p {
   border: 5px dotted #000;
   border-radius: 20px;
   font-size: 15px;
-  -webkit-animation: move 4s linear infinite;
-          animation: move 4s linear infinite;
+  animation: move 4s linear infinite;
   text-align: center;
   padding: 15px 0;
   font-family: "InsideOut";
@@ -88,19 +87,7 @@ p {
   position: absolute;
   bottom: 0;
   left: 5%;
-  -webkit-animation: move 4s linear infinite;
-          animation: move 4s linear infinite;
-}
-@-webkit-keyframes move {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  animation: move 4s linear infinite;
 }
 @keyframes move {
   0% {
@@ -141,8 +128,7 @@ p {
   z-index: 300;
   font-size: 30px;
   font-family: "InsideOut";
-  -webkit-animation: moving-left 2s infinite;
-          animation: moving-left 2s infinite;
+  animation: moving-left 2s infinite;
   color: #fff;
 }
 .wrapper .contents_sub_box .go_home_btn .go_home_img {
@@ -151,18 +137,7 @@ p {
   left: 2%;
   top: 3%;
   z-index: 300;
-  -webkit-animation: moving-left 2s infinite;
-          animation: moving-left 2s infinite;
-}
-@-webkit-keyframes moving-left {
-  0%, 100% {
-    transform: translate(0, 0) scale(1) rotate(-1deg);
-    opacity: 65%;
-  }
-  30% {
-    transform: translate(-5px, 5px) scale(0.95) rotate(-10deg);
-    opacity: 80%;
-  }
+  animation: moving-left 2s infinite;
 }
 @keyframes moving-left {
   0%, 100% {
@@ -171,16 +146,6 @@ p {
   }
   30% {
     transform: translate(-5px, 5px) scale(0.95) rotate(-10deg);
-    opacity: 80%;
-  }
-}
-@-webkit-keyframes moving-right {
-  0%, 100% {
-    transform: translate(0, 0) scale(1) rotate(1deg);
-    opacity: 65%;
-  }
-  30% {
-    transform: translate(5px, 5px) scale(0.95) rotate(10deg);
     opacity: 80%;
   }
 }
@@ -347,8 +312,7 @@ p {
   font-size: 30px;
   font-family: "InsideOut";
   color: #fff;
-  -webkit-animation: moving-right 2s infinite;
-          animation: moving-right 2s infinite;
+  animation: moving-right 2s infinite;
 }
 .wrapper .contents_sub_box .next_btn .next_img {
   width: 5%;
@@ -357,8 +321,7 @@ p {
   right: 6%;
   top: 3%;
   z-index: 300;
-  -webkit-animation: moving-right 2s infinite;
-          animation: moving-right 2s infinite;
+  animation: moving-right 2s infinite;
 }
 .wrapper .contents_sub_box #main_page3 {
   width: 25%;
@@ -386,19 +349,7 @@ p {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #212121;
-  -webkit-animation: typing 7s steps(5, end), cursor 1s step-start infinite;
-          animation: typing 7s steps(5, end), cursor 1s step-start infinite;
-}
-@-webkit-keyframes typing {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 22ch;
-  }
-  100% {
-    width: 45ch;
-  }
+  animation: typing 7s steps(5, end), cursor 1s step-start infinite;
 }
 @keyframes typing {
   0% {
@@ -409,11 +360,6 @@ p {
   }
   100% {
     width: 45ch;
-  }
-}
-@-webkit-keyframes cursor {
-  0%, 100% {
-    border-color: #212121;
   }
 }
 @keyframes cursor {
@@ -517,8 +463,7 @@ p {
   font-size: 30px;
   font-family: "InsideOut";
   color: #fff;
-  -webkit-animation: moving-left 2s infinite;
-          animation: moving-left 2s infinite;
+  animation: moving-left 2s infinite;
 }
 .wrapper .contents_sub_box .previous_btn .previous_btn {
   width: 4.5%;
@@ -527,8 +472,7 @@ p {
   left: 7%;
   top: 3%;
   z-index: 300;
-  -webkit-animation: moving-left 2s infinite;
-          animation: moving-left 2s infinite;
+  animation: moving-left 2s infinite;
 }
 .wrapper .contents_sub_box #main_page4 {
   width: 25%;
@@ -553,8 +497,7 @@ p {
   z-index: 300;
   font-size: 30px;
   font-family: "InsideOut";
-  -webkit-animation: moving-right 2s infinite;
-          animation: moving-right 2s infinite;
+  animation: moving-right 2s infinite;
   color: #fff;
 }
 .wrapper .contents_sub_box #main_page4 .go_home_btn2 .go_home_img {
@@ -564,8 +507,7 @@ p {
   right: 2%;
   top: 3%;
   z-index: 300;
-  -webkit-animation: moving-right 2s infinite;
-          animation: moving-right 2s infinite;
+  animation: moving-right 2s infinite;
 }
 .wrapper .contents_sub_box #main_page4 .video {
   width: 100%;
